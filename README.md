@@ -4,10 +4,12 @@ We introduce a video dataset **Bukva** for Russian Dactyl Recognition task. Bukv
 
 ![image](images/gestures.png)
 
+![gif](images/bukva.gif)
+
 ## Downloads
 |                                                                                               Downloads | Size (GB) | Comment                                                              |
 |--------------------------------------------------------------------------------------------------------:|:----------|:---------------------------------------------------------------------|
-|[dataset](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/bukva/bukva.zip) | ~27       | Original HD+ videos                     |
+|[dataset](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/bukva/bukva.zip) | ~27       | Original HD+, Trimmed HD+, annotations                     |
 
 Annotation file is easy to use and contains some useful columns, see `annotations.tsv` file:
 
@@ -28,6 +30,22 @@ where:
 - `train` - train or test boolean flag
 - `length` - video length
 
+After downloading, you can unzip the archive by running the following command:
+```bash
+unzip <PATH_TO_ARCHIVE> -d <PATH_TO_SAVE>
+```
+The structure of the dataset is as follows:
+```
+├── original
+│   ├── 0a1b79d6-...
+│   ├── 0a53c65e-...
+│   ├── ...
+├── trimmed
+│   ├── 0a1b79d6-...
+│   ├── 0a53c65e-...
+│   ├── ...
+├── annotations.tsv
+```
 
 ## Models
 We provide some pre-trained models as the baseline for Russian Dactyl Recognition.
@@ -36,6 +54,20 @@ We provide some pre-trained models as the baseline for Russian Dactyl Recognitio
 | Model Name        | Model Size (MB) | Metric | ONNX|
 |-------------------|-----------------|--------|-----|
 | MobileNetV2_TSM | 9.1          | 83.6  | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/bukva/models/MobileNetV2_TSM.onnx)|
+
+## Training
+To train models from scratch you need to follow the instructions below.
+
+1. Download dataset using link from section [Download](#downloads)
+2. Convert annotations to txt format using [constants.py](constants.py)
+   ```
+   <path_to_video> <class_id>
+   <path_to_video> <class_id>
+   ...
+   ```
+3. Using [mmaction2](https://github.com/open-mmlab/mmaction2/tree/main) framework to train models, prepare the environment.
+4. Add the path to your train and test txt files to the [training_pipeline_tsm.py](configs/training_pipeline_tsm.py) config.
+5. Choose model config from the configs folder and start training.
 
 ## Demo
 ```console
@@ -56,7 +88,7 @@ python demo.py -p <PATH_TO_CONFIG>
 
 ## Authors and Credits
 - [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
-- Surovtsev Petr
+- [Surovtsev Petr](https://www.linkedin.com/in/petros000)
 - [Nagaev Alexander](https://www.linkedin.com/in/nagadit/)
 - [Petrova Elizaveta](https://www.linkedin.com/in/elizaveta-petrova-248135263/)
 - [Kapitanov Alexander](https://www.linkedin.com/in/hukenovs)
