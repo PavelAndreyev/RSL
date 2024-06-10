@@ -2,8 +2,6 @@
 
 We introduce a video dataset **Bukva** for Russian Dactyl Recognition task. Bukva dataset size is about **27 GB**, and it contains **3757** RGB videos with more than 101 samples for each RSL alphabet sign, including dynamic ones. The dataset is divided into training set and test set by subject `user_id`. The training set includes 3097 videos, and the test set includes 660 videos. The total video recording time is ~4 hours. About 17% of the videos are recorded in HD format, and 70% of the videos are in FullHD resolution.
 
-![image](images/gestures.png)
-
 ![gif](images/bukva.gif)
 
 ## Downloads
@@ -85,6 +83,9 @@ optional arguments:
 
 python demo.py -p <PATH_TO_CONFIG>
 ```
+## Dataset example
+
+![image](images/gestures.png)
 
 ## Authors and Credits
 - [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
