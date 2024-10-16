@@ -7,7 +7,7 @@ We introduce a video dataset **Bukva** for Russian Dactyl Recognition task. Bukv
 ## Downloads
 |                                                                                               Downloads | Size (GB) | Comment                                                              |
 |--------------------------------------------------------------------------------------------------------:|:----------|:---------------------------------------------------------------------|
-|[dataset](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/bukva/bukva.zip) | ~27       | Original HD+, Trimmed HD+, annotations                     |
+|[dataset](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/bukva/bukva.zip) | ~27       | Original HD+, Trimmed HD+, annotations                     |
 
 Annotation file is easy to use and contains some useful columns, see `annotations.tsv` file:
 
@@ -51,7 +51,7 @@ We provide some pre-trained models as the baseline for Russian Dactyl Recognitio
 
 | Model Name        | Model Size (MB) | Metric | ONNX|
 |-------------------|-----------------|--------|-----|
-| MobileNetV2_TSM | 9.1          | 83.6  | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/bukva/models/MobileNetV2_TSM.onnx)|
+| MobileNetV2_TSM | 9.1          | 83.6  | [weights](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/bukva/models/MobileNetV2_TSM.onnx)|
 
 ## Training
 To train models from scratch you need to follow the instructions below.
@@ -84,11 +84,13 @@ optional arguments:
 python demo.py -p <PATH_TO_CONFIG>
 ```
 ## Dataset example
+
 ![image](images/gestures.png)
 
-## Links
-- [arXiv](https://arxiv.org/abs/2410.08675v1)
-- [Habr](https://habr.com/ru/companies/sberdevices/articles/850858/)
+### License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+Please see the specific [license](license/en_us.pdf).
 
 ## Authors and Credits
 - [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
@@ -97,5 +99,22 @@ python demo.py -p <PATH_TO_CONFIG>
 - [Petrova Elizaveta](https://www.linkedin.com/in/elizaveta-petrova-248135263/)
 - [Kapitanov Alexander](https://www.linkedin.com/in/hukenovs)
 
-## License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+### Links
+- [Github](https://github.com/ai-forever/bukva)
+- [arXiv](https://arxiv.org/abs/2410.08675)
+- [Habr](https://habr.com/ru/companies/sberdevices/articles/850858/)
+- [Paperswithcode](https://paperswithcode.com/paper/bukva-russian-sign-language-alphabet)
+
+### Citation
+You can cite the paper using the following BibTeX entry:
+
+    @misc{kvanchiani2024bukvarussiansignlanguage,
+      title={Bukva: Russian Sign Language Alphabet},
+      author={Karina Kvanchiani and Petr Surovtsev and Alexander Nagaev and Elizaveta Petrova and Alexander Kapitanov},
+      year={2024},
+      eprint={2410.08675},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.08675},
+}
