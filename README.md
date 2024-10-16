@@ -84,8 +84,11 @@ optional arguments:
 python demo.py -p <PATH_TO_CONFIG>
 ```
 ## Dataset example
-
 ![image](images/gestures.png)
+
+## Links
+- [arXiv](https://arxiv.org/abs/2410.08675v1)
+- [Habr](https://habr.com/ru/companies/sberdevices/articles/850858/)
 
 ## Authors and Credits
 - [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
@@ -93,3 +96,6 @@ python demo.py -p <PATH_TO_CONFIG>
 - [Nagaev Alexander](https://www.linkedin.com/in/nagadit/)
 - [Petrova Elizaveta](https://www.linkedin.com/in/elizaveta-petrova-248135263/)
 - [Kapitanov Alexander](https://www.linkedin.com/in/hukenovs)
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
