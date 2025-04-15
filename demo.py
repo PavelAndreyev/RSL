@@ -12,7 +12,11 @@ from omegaconf import OmegaConf
 from PIL import Image, ImageDraw, ImageFont
 
 classes = [
-    "no_event", "Ё", "А", "Б", "В", "Г", "Д", "Е", "Ж", "З", "И", "Й", "К", "Л",
+    "no_event", "Ё", "А", "Б", "В", "Г", "Д", "Е", "Ж", "З", "И", "Й", "К", "Л",/home/ppds/PycharmProjects/RSL_R/.venv/bin/python /home/ppds/PycharmProjects/RSL_R/demo.py
+Traceback (most recent call last):
+  File "/home/ppds/PycharmProjects/RSL_R/demo.py", line 6, in <module>
+    import onnxruntime as ort
+ModuleNotFoundError: No module named 'onnxruntime'
     "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ъ",
     "Ы", "Ь", "Э", "Ю", "Я"
 ]

@@ -4,7 +4,7 @@ import onnxruntime as ort
 from collections import deque
 
 # === Параметры ===
-model_path = 'tsm_bukva.onnx'
+model_path = 'models/tsm_bukva.onnx'
 alphabet = [f'Class_{i}' for i in range(34)]  # или замени на реальные буквы
 clip_len = 8
 frame_interval = 2
