@@ -1,4 +1,4 @@
-model_path: /home/ppds/PycharmProjects/gluh/tsm_bukva.onnx
+model_path: /home/ppds/PycharmProjects/RSL_R/tsm_bukva.onnx
 mean: [123.675, 116.28, 103.53]
 std: [58.395, 57.12, 57.375]
 frame_interval: 2
