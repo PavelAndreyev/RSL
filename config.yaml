@@ -1,4 +1,4 @@
-model_path: MobileNetV2_TSM.onnx
-frame_interval: 2 # set frame interval
+model_path: /home/ppds/PycharmProjects/gluh/tsm_bukva.onnx
 mean: [123.675, 116.28, 103.53]
 std: [58.395, 57.12, 57.375]
+frame_interval: 2
